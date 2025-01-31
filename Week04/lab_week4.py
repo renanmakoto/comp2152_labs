@@ -82,7 +82,7 @@ good_loot_options = ["Health Potion", "Leather Boots"]
 bad_loot_options = ["Poison Potion"]
 
 #Lab04 - Q1
-# Defien the Monster Power:
+# Define the Monster Power:
 monster_power = {
     "Fire Magic": 2,
     "Freezing time": 4,
@@ -158,6 +158,10 @@ print("--- You are matched in strength: " + str(combat_strength == m_combat_stre
 
 # Check the Player's overall strength and health
 print("--- You have a strong player: " + str((combat_strength + health_points) >= 15))
+
+#Lab02 - Q2 - Roll for the monster's power
+input("Roll for the Monster's Power (Press Enter)")
+power_roll = random.choice(["Fire magin", "Freezing time", "Super hearing"])
 
 # Loop while the monster and the player are alive. Call fight sequence functions
 print("You meet the monster. FIGHT!!")

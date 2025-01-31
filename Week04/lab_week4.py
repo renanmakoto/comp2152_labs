@@ -163,7 +163,7 @@ loot = loot_options .pop(lootRoll - 1)
 belt.append(loot)
 print(f"Your belt: {belt}")
 
-#Lab04 - Q5 - Item 2
+#Lab04 - Q6 - Item 2
 print("You found a loot bag! Look inside to find 2 items")
 input("Roll for the second item (Press Enter)")
 lootRoll = random.choice(range(1, len(loot_options) + 1))

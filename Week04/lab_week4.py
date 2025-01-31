@@ -158,6 +158,10 @@ print("Player rolled " + str(m_health_points) + " health points for the monster"
 #Lab04 - Q5 - Item 1
 print("You found a loot bag! Look inside to find 2 items")
 input("Roll for the first item (Press Enter)")
+lootRoll = random.choice(range(1, len(loot_options) + 1))
+loot = loot_options .pop(lootRoll - 1)
+belt.append(loot)
+print(f"Your belt: {belt}")
 
 input("Analyze the roll (Press enter)")
 # Compare Player vs Monster's strength

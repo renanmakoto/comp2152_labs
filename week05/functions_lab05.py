@@ -14,12 +14,12 @@ def use_loot(belt, health_points):
     first_item = belt.pop(0)
     if first_item in good_loot_options:
         health_points = min(20, (health_points + 2))
-        print("    |    You used " +  +" to up your health to " + str(health_points))
-    elif :
-        
-        print("    |    You used " +  + " to hurt your health to " + )
+        print("    |    You used " + first_item +" to up your health to " + str(health_points))
+    elif first_item in bad_loot_options:
+        health_points = max(20, (health_points - 2))
+        print("    |    You used " + first_item + " to hurt your health to " + str(health_points))
     else:
-        print("    |    You used " +  + " but it's not helpful")
+        print("    |    You used " + first_item + " but it's not helpful")
     return 
 
 

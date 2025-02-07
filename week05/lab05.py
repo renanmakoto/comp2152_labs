@@ -118,13 +118,14 @@ if not input_invalid:
     input("Roll for first item (enter)")
 
     # Lab 5 - Question 4: Collect Loot First time
-    
+    loot_options = functions_lab05.collect_loot(loot_options, belt)
     print("    ------------------------------------------------------------------")
     print("    |", end="    ")
     input("Roll for second item (Press enter)")
 
     # Lab 5 - Question 4: Collect Loot Second time
     
+    loot_options = functions_lab05.collect_loot(loot_options, belt)
 
     print("    |    You're super neat, so you organize your belt alphabetically:")
     belt.sort()
@@ -132,7 +133,7 @@ if not input_invalid:
 
     ## Lab 5 - Question 4: Use Loot
     
-
+    belt, health_points = functions_lab05.use_loot(belt, health_points)
     print("    ------------------------------------------------------------------")
     print("    |", end="    ")
     input("Analyze the roll (Press enter)")
@@ -246,4 +247,3 @@ if not input_invalid:
         stars_display = "*" * num_stars
         # Lab 5 - Question 2: 
         print("    |    Hero " + short_name + "gets <" + stars_display + "> start")
-        

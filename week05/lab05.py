@@ -126,7 +126,6 @@ if not input_invalid:
     # Lab 5 - Question 4: Collect Loot Second time
     
     loot_options = functions_lab05.collect_loot(loot_options, belt)
-
     print("    |    You're super neat, so you organize your belt alphabetically:")
     belt.sort()
     print("    |    Your belt: ", belt)

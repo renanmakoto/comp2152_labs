@@ -4,6 +4,12 @@ import random
 # Put all the functions into another file and import them
 import functions_lab06
 
+
+print("---------------")
+print("Loading previous game data...")
+# Lab 06 - Question 5
+last_game = functions_lab06.load_game()
+
 # Game Flow
 # Define two Dice
 small_dice_options = list(range(1, 7))
@@ -82,6 +88,9 @@ if not input_invalid:
     # Limit the combat strength to 6
     combat_strength = min(6, (combat_strength + weapon_roll))
     print("    |    The hero\'s weapon is " + str(weapons[weapon_roll - 1]))
+
+    # Lab 06 - Question 5b
+    functions_lab06.adjust_combat_strength(combat_strength, m_combat_strength)
 
     # Weapon Roll Analysis
     print("    ------------------------------------------------------------------")
@@ -243,4 +252,5 @@ if not input_invalid:
     if not input_invalid:
         stars_display = "*" * num_stars
         print("    |    Hero " + short_name + " gets <" + stars_display + "> stars")
-
+        # Lab 06 - Question 3 and 4
+        functions_lab06.save_game(winner, hero_name=short_name, num_stars=num_stars)

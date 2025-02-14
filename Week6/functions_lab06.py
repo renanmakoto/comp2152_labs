@@ -147,7 +147,16 @@ def save_game(winner, hero_name="", num_stars=0):
         file.close()
 
 # Lab 06 - Question 5a
-
-
+def load_game():
+    try:
+        with open("save.txt", "r") as file:
+            print("    |    Loading from save file...")
+            lines = file.readlines()
+            if lines:
+                last_line = lines[-1].strip()
+                print(last_line)
+                return last_line
+    except FileNotFoundError:
+        print("    |    No previous game found. Starting fresh...")
 
 # Lab 06 - Question 5b

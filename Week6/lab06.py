@@ -175,16 +175,26 @@ if not input_invalid:
     print("    |    The monster's combat strength is now " + str(
         m_combat_strength) + " using the " + power_roll + " magic power")
     # Lab 06 - Question 6
-
-    # Call Recursive function
-    print("    |", end="    ")
-    num_dream_lvls = input("How many dream levels do you want to go down?")
-    if num_dream_lvls != 0:
-        health_points -= 1
-        crazy_level = functions_lab06.inception_dream(num_dream_lvls)
-        combat_strength += crazy_level
-        print("combat strength: " + str(combat_strength))
-        print("health points: " + str(health_points))
+    num_dream_lvls = -1
+    while (num_dream_lvls < 0 or num_dream_lvls > 3):
+        # Call Recursive function
+        print("    |", end="    ")
+        num_dream_lvls = input("How many dream levels do you want to go down?")
+        if (num_dream_lvls == ""):
+            print("Number entered should be a whole number betwee 1 and 3. Try again")
+            num_dream_lvls = -1
+        else:
+             num_dream_lvls = int(num_dream_lvls)
+             if (num_dream_lvls < 0 ) or (num_dream_lvls < 3):
+                 num_dream_lvls = -1
+                print("Number entered should be a whole number betwee 1 and 3. Try again")
+            elif num_dream_lvls != 0:
+                health_points -= 1
+                crazy_level = functions_lab06.inception_dream(num_dream_lvls)
+                combat_strength += crazy_level
+                print("combat strength: " + str(combat_strength))
+                print("health points: " + str(health_points))
+        print(f"num_dream_lvls: {num_dream_lvls}")
 
     # Fight Sequence
     # Loop while the monster and the player are alive. Call fight sequence functions
@@ -255,4 +265,4 @@ if not input_invalid:
         stars_display = "*" * num_stars
         print("    |    Hero " + short_name + " gets <" + stars_display + "> stars")
         # Lab 06 - Question 3 and 4
-        functions_lab06.save_game(winner, hero_name=short_name, num_stars=num_stars)
+        functions_lab06.save_game(winner, hero_name=short_name, num_stars=num_stars)    

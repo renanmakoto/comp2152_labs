@@ -40,3 +40,5 @@ if pid == 0:
     print(f"[ File Content: {os.read(file_handle, 100).decode()} ]")
     os.close(file_handle)
     sys.exit(0)
+else:
+    

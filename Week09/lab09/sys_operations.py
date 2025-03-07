@@ -2,6 +2,7 @@
 import platform
 import socket
 import os
+import sys
 
 print("Machine type: ")
 print(platform.machine(), "\n")
@@ -28,9 +29,14 @@ print(f"\n[Process {os.getgid()}] Opened file_handle: {file_handle}")
 
 file_object_TextIO = os.fdopen(file_handle, "w+")
 file_object_TextIO.write("Some string to write to the file")
-file_object_TextIO.flus()
+file_object_TextIO.flush()
 
 pid = os.fork()
 
 if pid == 0:
-    print(f"\n[Child process {os.getgid()}], [Child Process {os.getppid()}]")
+    print(f"\n[Child process {os.getpid()}], [Parent Process {os.getppid()}]")
+    os.lseek(file_handle, 0, 0)
+
+    print(f"[ File Content: {os.read(file_handle, 100).decode()} ]")
+    os.close(file_handle)
+    sys.exit(0)

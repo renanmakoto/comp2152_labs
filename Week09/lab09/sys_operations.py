@@ -40,5 +40,13 @@ if pid == 0:
     print(f"[ File Content: {os.read(file_handle, 100).decode()} ]")
     os.close(file_handle)
     sys.exit(0)
+
 else:
-    
+    print(f"\n[Parent Process {os.getpid()}], [Child Process {pid}]")
+    print("Wait for the child process to finish its task")
+    os.wait()
+    print("The child process was able to finish its task")
+    file_object_TextIO.close()
+
+print(f"\n[Process {os.getpid()}] File closed. Exiting now... ")
+sys.exit()

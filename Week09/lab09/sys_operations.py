@@ -17,4 +17,4 @@ print("OS Type: ")
 print(os.name)
 
 print("OS Name: ")
-print(os.system())
+print(platform.system())

@@ -33,7 +33,7 @@ class Person:
     def __del__(self):
         print("The garbage collector is automatically destroying the person object")
 
-person1 = Person("Mark", 20, 1.67)
+person1 = Person("Mark", 20, 6)
 print(f"The name of the person is {str(person1.name)}\nAge: {int(person1.age)}\nHeight: {float(person1.height)}")
 
 person1.name = "Alfred"

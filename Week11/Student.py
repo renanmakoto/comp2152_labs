@@ -15,5 +15,5 @@ class Student(Person):
         self.__major = new_major
 
 print("This time it's a Student object")
-student1 = Student("Renan", 33, 1.67, "T177")
+student1 = Student("Maria", 22, 6, "Computer Science")
 print(f"Student name: {str(student1.name)}\nAge: {int(student1.age)}\nHeight: {float(student1.height)}\nProgram: {str(student1.major)}")

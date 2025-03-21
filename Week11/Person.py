@@ -36,5 +36,5 @@ class Person:
 person1 = Person("Mark", 20, 1.67)
 print(f"The name of the person is {str(person1.name)}, age {int(person1.age)}, height: {float(person1.height)}")
 
-person1.name = "Alfred"
-print(f"The name of the person is {str(person1.name)}") 
+# person1.name = "Alfred"
+# print(f"The name of the person is {str(person1.name)}") 

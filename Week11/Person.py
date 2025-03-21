@@ -14,11 +14,27 @@ class Person:
     def name(self, new_name):
         self.__name = new_name
 
+    @property
+    def age(self):
+        return self.__age
+    
+    @age.setter
+    def age(self, new_age):
+        self.__age = new_age
+
+    @property
+    def height(self):
+        return self.__height
+    
+    @height.setter
+    def age(self, new_height):
+        self.__height = new_height
+
     def __del__(self):
         print("The garbage collector is automatically destroying the person object")
 
-person1 = Person("Mark", 20, 6)
-print(f"The name of the person is {str(person1.name)}")
+person1 = Person("Mark", 20, 1.67)
+print(f"The name of the person is {str(person1.name)}, age {int(person1.age)}, height: {float(person1.height)}")
 
 person1.name = "Alfred"
-print(f"The name of the person is {str(person1.name)}")
+print(f"The name of the person is {str(person1.name)}") 

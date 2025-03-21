@@ -27,14 +27,14 @@ class Person:
         return self.__height
     
     @height.setter
-    def age(self, new_height):
+    def height(self, new_height):
         self.__height = new_height
 
     def __del__(self):
         print("The garbage collector is automatically destroying the person object")
 
 person1 = Person("Mark", 20, 1.67)
-print(f"The name of the person is {str(person1.name)}, age {int(person1.age)}, height: {float(person1.height)}")
+print(f"The name of the person is {str(person1.name)}\nAge: {int(person1.age)}\nHeight: {float(person1.height)}")
 
-# person1.name = "Alfred"
-# print(f"The name of the person is {str(person1.name)}") 
+person1.name = "Alfred"
+print(f"The name of the person is {str(person1.name)}") 

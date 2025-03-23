@@ -10,10 +10,10 @@ class Student(Person):
     def major(self):
         return self.__major
     
-    @program.setter
-    def program(self, new_major):
+    @major.setter
+    def major(self, new_major):
         self.__major = new_major
 
 print("This time it's a Student object")
 student1 = Student("Maria", 22, 6, "Computer Science")
-print(f"Student name: {str(student1.name)}\nAge: {int(student1.age)}\nHeight: {float(student1.height)}\nProgram: {str(student1.major)}")
+print(f"Student name: {str(student1.name)}\nAge: {int(student1.age)}\nHeight: {float(student1.height)}\Major: {str(student1.major)}")

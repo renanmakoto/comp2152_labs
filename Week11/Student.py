@@ -16,4 +16,4 @@ class Student(Person):
 
 print("This time it's a Student object")
 student1 = Student("Maria", 22, 6, "Computer Science")
-print(f"Student name: {str(student1.name)}\nAge: {int(student1.age)}\nHeight: {float(student1.height)}\Major: {str(student1.major)}")
+print(f"Student name: {str(student1.name)}\nAge: {int(student1.age)}\nHeight: {float(student1.height)}\nMajor: {str(student1.major)}")

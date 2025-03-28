@@ -8,8 +8,18 @@ class Mammal:
 
         self.heart = Heart()
 
+        self.tick = tick
+
     def __del__(self):
         print("Destructor: The garbage collector is now deleting the Mammal part of the object")
+
+    @property
+    def live_birth(self):
+        return self.__live_birth
+    
+    @live_birth.setter
+    def live_birth(self, p_live_birth):
+        self.__live_birth = p_live_birth
 
     def __str__(self):
         tick_status = "attached" if self.tick else "none"

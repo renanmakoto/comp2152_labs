@@ -6,6 +6,8 @@ class Mammal:
         self.age = p_age
         self.__live_birth = True
 
+        self.heart = Heart()
+
     def __del__(self):
         print("Destructor: The garbage collector is now deleting the Mammal part of the object")
 
